@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -35,6 +36,8 @@ INSTALLED_APPS = [
     'rest_auth',
     'django_extensions',
     'users.apps.UsersConfig',
+    'subject.apps.SubjectConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -101,6 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # serializer settings
 REST_AUTH_SERIALIZERS = {'USER_DETAILS_SERIALIZER': 'users.serializers.UserDetailSerializer'}
 
+LOGIN_REDIRECT_URL = 'home'
 # This is required otherwise it asks for email server
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # ACCOUNT_EMAIL_VERIFICATION = 'optional'
@@ -138,6 +142,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

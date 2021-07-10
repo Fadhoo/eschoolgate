@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load rest_framework %}
+<!-- Mirrored from preview.colorlib.com/theme/academia/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 May 2021 17:29:36 GMT -->
+
+<head>
+  <title>E School Gate - online school system</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{% static '../../../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static '../../../cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css' %}">
+  <link rel="stylesheet"
+    href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+  <div class="top-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-md col-xl-5 d-flex align-items-center">
+          <a class="navbar-brand align-items-center" href="index-2.html">
+            E School Gate
+            <span>Online Education &amp; Learning</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <nav class="navbar navbar-expand-lg  ftco-navbar-light">
+    <div class="container-xl">
+
+      <a href="#" class="btn-custom order-lg-last">Get Certificate</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index-2.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">All Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <section class="hero-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="card" style="width: 50%; padding-top: 10%;">
+        <div class="card-body">
+          <h5 class="card-title">Sign In</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Welcome</h6>
+          <form action="{% url 'login' %}" method="post" novalidate>
+              {% csrf_token %}
+              {% render_form serializer template_pack='rest_framework/vertical' %}
+              <button type="submit" class="btn btn-default">Sign in</button>
+          </form>
+          <a href="#" class="card-link">Forgot Password?</a>
+          <a href="signup.html" class="card-link">Don't have an account yet</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  </section>
+
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/tiny-slider.js' %}"></script>
+  <script src="{% static 'js/glightbox.min.js%2baos.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.CNHUYLpEWQ.js' %}"></script>
+  <script>eval(mod_pagespeed_7_hPlGGYt1);</script>
+  <script>eval(mod_pagespeed_QuG92EaMQX);</script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false "></script>
+  <script>eval(mod_pagespeed_mTpoFW8ALW);</script>
+  <script>eval(mod_pagespeed_omftQ6ch3C);</script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+  </script>
+
+
+</body>
+
+</html>

@@ -53,7 +53,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     ordering = ('created',)
 
     def get_full_name(self):
-        return self.email
+        return self.first_name + ' ' + self.last_name
 
     def __unicode__(self):
         return self.email
@@ -65,7 +65,7 @@ class CommonInfo(models.Model):
         ('F', 'Female'),
     )
 
-    profile_picture = models.ImageField(blank=True, upload_to='profile_pic')
+    profile_picture = models.ImageField(blank=True, upload_to='media/profile_pic')
     dob = models.DateField(null=True)
     gender = models.CharField(max_length=1, choices=GENDER, blank=True)
     school = models.TextField(max_length=500, blank=True)
